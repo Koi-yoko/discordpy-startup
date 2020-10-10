@@ -18,7 +18,7 @@ async def ping(ctx):
     await ctx.send('pong')
 
 @bot.command()
-async def 祭司(ctx):
+async def saishi(ctx):
     await ctx.send('ごみ')
 
 bot.run(token)
