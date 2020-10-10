@@ -21,4 +21,15 @@ async def ping(ctx):
 async def saishi(ctx):
     await ctx.send('ごみ')
 
+
+@client.event
+async def on_message(message): 
+    if message.content == "おはよう":
+        await client.send_message(message.channel, "Hello world!!")
+client.run('NzY0NDAwNjE4ODE0ODMyNzAx.X4FtjQ.ViiKUux6rAl0XB3dm0v4muxyzsg')
+    
+    
+    
+    
+    
 bot.run(token)
