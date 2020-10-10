@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import random
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -23,10 +24,11 @@ async def saishi(ctx):
 
 
 @client.event
-async def on_message(message): 
-    if message.content == "おはよう":
-        await client.send_message(message.channel, "Hello world!!")
-client.run('NzY0NDAwNjE4ODE0ODMyNzAx.X4FtjQ.ViiKUux6rAl0XB3dm0v4muxyzsg')
+async def uranai(ctx): 
+    unsei = ["大吉", "中吉", "吉", "末吉", "小吉", "凶", "大凶"]
+        choice = random.choice(unsei)
+        await message.send_message(message.channel, choice)
+
     
     
     
