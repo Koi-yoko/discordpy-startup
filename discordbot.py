@@ -1,7 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
-import random
+
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -22,8 +22,9 @@ async def ping(ctx):
 async def saishi(ctx):
     await ctx.send('ごみ')
 
+import random
 
-@client.event
+@bot.command()
 async def uranai(ctx): 
     unsei = ["大吉", "中吉", "吉", "末吉", "小吉", "凶", "大凶"]
         choice = random.choice(unsei)
