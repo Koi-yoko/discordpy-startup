@@ -26,13 +26,9 @@ import random
 
 @bot.command()
 async def uranai(ctx): 
+    await ctx.send(unsei)
     unsei = ["大吉", "中吉", "吉", "末吉", "小吉", "凶", "大凶"]
         choice = random.choice(unsei)
         await message.send_message(message.channel, choice)
-
-    
-    
-    
-    
     
 bot.run(token)
